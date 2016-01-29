@@ -637,7 +637,7 @@ void Frame_print(const u_char *buffer)
 
     else if(Type == 1) {} // Control Frame;
 
-    else if(Type == 2) {
+    else if(Type == 2) { // Data Frame
 
         __le16 _duration;
         memcpy(&_duration,buffer+pkt_len,sizeof(__le16));
@@ -670,9 +670,7 @@ void Frame_print(const u_char *buffer)
             memcpy(_ap_info._bssid,Des_Address,6 * sizeof(__u8));
         }
 
-
-
-    } // Data Frame
+    } 
 
 
 }
