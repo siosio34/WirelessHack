@@ -514,7 +514,7 @@ void Frame_print(const u_char *buffer)
 
     int n = 1;
 
-    for(int i = 0 ; i<8 ; i++) {
+    for(int i = 0 ; i< 8 ; i++) {
 
         check_capabilties[i] = (Flag & (n << i) ? true : false);
         if(i == 0); // mobile -> APStation
@@ -531,7 +531,6 @@ void Frame_print(const u_char *buffer)
         else if(i == 7); // Order flag
 
     }
-
 
     if(Type == 0) {
 
